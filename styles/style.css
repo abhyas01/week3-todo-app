@@ -60,7 +60,7 @@ body{
   font-optical-sizing: auto;
   font-weight: 700;
   font-style: normal;
-  font-size: 15px;
+  font-size: 16px;
   background-color: #caf0f8;
   color: #003566;
   border-color: #75A6FC;
@@ -96,7 +96,7 @@ body{
   font-optical-sizing: auto;
   font-weight: 700;
   font-style: normal;
-  font-size: 15px;
+  font-size: 14px;
   color: #003566;
   word-break: break-word;
   resize: none;
@@ -117,7 +117,7 @@ body{
   font-optical-sizing: auto;
   font-weight: 700;
   font-style: normal;
-  font-size: 15px;
+  font-size: 14px;
   color: #003566;
   word-break: break-word;
 }
@@ -133,7 +133,7 @@ body{
   font-optical-sizing: auto;
   font-weight: 700;
   font-style: normal;
-  font-size: 15px;
+  font-size: 13px;
   background-color: #caf0f8;
   color: #003566;
   border-color: #75A6FC;
@@ -189,29 +189,27 @@ body{
 @media screen and (min-width: 250px){
   .input-main{
     width: 200px;
-    padding: 5px 20px;
-    font-size: 15px;
   }
 
   .main-btn{
-    border-radius: 20px;
     padding: 3px 25px;
-    font-weight: 700;
-    font-size: 20px;
+  }
+
+  .todo-content{
+    font-size: 16px;
+  }
+
+  .input-box{
+    font-size: 16px;
+  }
+
+  .btn{
+    font-size: 15px;
   }
 
 }
 
 @media screen and (min-width: 425px){
-  .input-main{
-    font-size: 15px;
-  }
-
-  .main-btn{
-    padding: 3px 25px;
-    font-size: 20px;
-  }
-
   .adding-div{
     flex-direction: row;
     gap: 30px;
@@ -223,9 +221,6 @@ body{
 
   .input-box{
     font-size: 20px;
-  }
-
-  .input-box{
     max-height: 30vw;
   }
 
@@ -235,7 +230,6 @@ body{
   .input-main{
     height: 30px;
     width: 300px;
-    padding: 5px 20px;
     font-size: 20px;
   }
 
