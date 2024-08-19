@@ -84,8 +84,8 @@ body{
   background-color: inherit;
   border: 1px solid aqua;
   outline: none;
-  max-height: 10vw;
-  min-height: 35px;
+  max-height: 5vw;
+  min-height: 28px;
   font-family: "Space Grotesk", sans-serif;
   font-optical-sizing: auto;
   font-weight: 700;
@@ -215,8 +215,8 @@ body{
   }
 
   .input-box{
-    max-height: 5vw;
-    min-height: 28px;
+    max-height: 30vw;
+    min-height: 30px;
   }
 
 }
