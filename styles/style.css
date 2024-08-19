@@ -88,6 +88,7 @@ body{
   width: 60%;
   background-color: inherit;
   border: 1px solid aqua;
+  border-radius: 10px;
   outline: none;
   max-height: 20vh;
   min-height: 30px;
