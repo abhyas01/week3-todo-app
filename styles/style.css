@@ -241,11 +241,15 @@ body{
   }
 
   .todo-content{
-    max-height: 20vw;
+    max-height: 200px;
   }
 
   .input-box{
-    max-height: 20vw;
+    max-height: 200px;
+  }
+
+  .todo-item{
+    margin: 20px auto;
   }
 
 }
