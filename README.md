@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project is a Todo App built as part of Week 3 of the DevOps + WebDev Cohort 3.0. The main focus of this assignment was to:
+This project is a Todo App built as part of **Week 3 of the DevOps + WebDev Cohort 3.0.** The main focus of this assignment was to:
 
 - Learn DOM manipulation techniques.
 - Create a mock version of React's Reconciler to understand state management and how React updates the DOM efficiently.
