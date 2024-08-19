@@ -44,7 +44,7 @@ function editHandler(todo) {
   const p = divElem.querySelector("p");
   const editBtn = divElem.querySelector(".edit-btn");
   const textarea = document.createElement("textarea");
-  textarea.value = p.textContent;
+  textarea.value = p.innerText;
   textarea.classList.add('input-box');
   divElem.removeChild(p);
   divElem.insertBefore(textarea, divElem.firstChild);
