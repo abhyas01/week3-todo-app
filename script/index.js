@@ -61,8 +61,6 @@ function editHandler(todo) {
   };
 }
 
-
-
 function createTodoComponent(todo){
   const div = document.createElement('div');
   const div2 = document.createElement('div');
