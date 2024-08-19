@@ -84,7 +84,7 @@ body{
   background-color: inherit;
   border: 1px solid aqua;
   outline: none;
-  max-height: 10vw;
+  max-height: 20vh;
   min-height: 30px;
   font-family: "Space Grotesk", sans-serif;
   font-optical-sizing: auto;
@@ -92,6 +92,7 @@ body{
   font-style: normal;
   font-size: 15px;
   color: #003566;
+  word-break: break-all;
 }
 
 .input-box:focus{
@@ -100,7 +101,7 @@ body{
 
 .todo-content{
   width: 60vw;
-  max-height: 10vw;
+  max-height: 20vh;
   min-height: 25px;
   overflow: auto;
   font-family: "Space Grotesk", sans-serif;
@@ -109,6 +110,7 @@ body{
   font-style: normal;
   font-size: 15px;
   color: #003566;
+  word-break: break-all;
 }
 
 .btn{
@@ -231,6 +233,14 @@ body{
   .main-btn{
     padding: 5px 30px;
     font-size: 25px;
+  }
+
+  .todo-content{
+    max-height: 20vw;
+  }
+
+  .input-box{
+    max-height: 20vw;
   }
 
 }
