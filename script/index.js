@@ -6,6 +6,10 @@ let todos = [];
 let idCounter = 0;
 
 function addTodo() {
+  if (mainInput.value.trim() === ""){
+    alert("Please enter a todo item.");
+    return;
+  }
   todos.push({
     id: idCounter++,
     title: mainInput.value
