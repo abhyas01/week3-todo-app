@@ -98,6 +98,9 @@ body{
   font-size: 15px;
   color: #003566;
   word-break: break-all;
+  resize: none;
+  overflow: auto;
+  line-height: inherit;
 }
 
 .input-box:focus{

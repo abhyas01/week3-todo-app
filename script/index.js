@@ -34,7 +34,12 @@ function editTodo(todo, newVal){
   render();
 }
 
-function editHandler(todo){
+function autoResizeTextarea(textarea) {
+  textarea.style.height = 'auto';
+  textarea.style.height = textarea.scrollHeight + 'px';
+}
+
+function editHandler(todo) {
   const divElem = document.getElementById(todo.id);
   const p = divElem.querySelector("p");
   const editBtn = divElem.querySelector(".edit-btn");
@@ -43,6 +48,11 @@ function editHandler(todo){
   textarea.classList.add('input-box');
   divElem.removeChild(p);
   divElem.insertBefore(textarea, divElem.firstChild);
+  autoResizeTextarea(textarea);  
+  textarea.addEventListener('input', () => {
+    autoResizeTextarea(textarea);
+  });
+
   editBtn.textContent = "Done";
   editBtn.classList.remove("edit-btn");
   editBtn.classList.add("done-btn");
@@ -50,6 +60,8 @@ function editHandler(todo){
     editTodo(todo, textarea.value);
   };
 }
+
+
 
 function createTodoComponent(todo){
   const div = document.createElement('div');
