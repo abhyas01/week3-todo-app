@@ -90,7 +90,7 @@ body{
   font-optical-sizing: auto;
   font-weight: 700;
   font-style: normal;
-  font-size: 20px;
+  font-size: 15px;
   color: #003566;
 }
 
@@ -107,7 +107,7 @@ body{
   font-optical-sizing: auto;
   font-weight: 700;
   font-style: normal;
-  font-size: 20px;
+  font-size: 15px;
   color: #003566;
 }
 
@@ -194,9 +194,6 @@ body{
 @media screen and (min-width: 425px){
   .input-main{
     font-size: 15px;
-    height: 20px;
-    width: 200px;
-    padding: 5px 20px;
   }
 
   .main-btn{
@@ -207,6 +204,14 @@ body{
   .adding-div{
     flex-direction: row;
     gap: 30px;
+  }
+
+  .todo-content{
+    font-size: 20px;
+  }
+
+  .input-box{
+    font-size: 20px;
   }
 
 }
