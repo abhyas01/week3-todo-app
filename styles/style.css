@@ -97,7 +97,7 @@ body{
   font-style: normal;
   font-size: 15px;
   color: #003566;
-  word-break: break-all;
+  word-break: break-word;
   resize: none;
   overflow: auto;
   line-height: inherit;
@@ -118,7 +118,7 @@ body{
   font-style: normal;
   font-size: 15px;
   color: #003566;
-  word-break: break-all;
+  word-break: break-word;
 }
 
 .btn{

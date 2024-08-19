@@ -71,7 +71,7 @@ function createTodoComponent(todo){
   button2.textContent = 'Edit';
   button.onclick = () => { deleteTodo(todo);};
   button2.onclick = () => { editHandler(todo); };
-  p.textContent = todo.title;
+  p.innerText = todo.title;
   div2.append(button);
   div2.append(button2);
   div.append(p);
