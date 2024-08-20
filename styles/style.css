@@ -45,11 +45,11 @@ body{
 
 .main-btn:hover{
   cursor: pointer;
-  background-color: hwb(173 68% 0%);
+  background-color: #5ee4ff;
 }
 
 .main-btn:active{
-  background-color: #5cd7ef;
+  background-color: #78cdff;
 }
 
 .input-main{
@@ -141,42 +141,42 @@ body{
 }
 
 .delete-btn{
-  background-color: #dd7dcd;
+  background-color: #ff98ee;
 }
 
 .edit-btn{
-  background-color: #ebb8df;
+  background-color: #9bdae7;
 }
 
 .done-btn{
-  background-color: #658FB7;
+  background-color: #95ceb4;
 }
 
 .done-btn:hover{
   cursor: pointer;
-  background-color: #8eb5f3;
+  background-color: #5edaa0;
 }
 
 .edit-btn:hover{
   cursor: pointer;
-  background-color: #ffd8f6;
+  background-color: #14b7d8;
 }
 
 .delete-btn:hover{
   cursor: pointer;
-  background-color: #e099d4;
+  background-color: rgb(255, 111, 221);
 }
 
 .done-btn:focus{
-  background-color: #94c9fb;
+  background-color: #10ec85;
 }
 
 .edit-btn:focus{
-  background-color: #fff4fc;
+  background-color: #00caf7;
 }
 
 .delete-btn:focus{
-  background-color: #ffacf1;
+  background-color: rgb(255, 57, 209);
 }
 
 .todo-item > div{

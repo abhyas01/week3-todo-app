@@ -2,35 +2,40 @@ const mainDiv = document.querySelector('#todos');
 const mainInput = document.querySelector(".input-main");
 const mainButton = document.querySelector(".main-btn");
 
-let todos = [];
-let idCounter = 0;
+const todosObject = {
+  todos: [],
+  idCounter: 0
+};
 
 function addTodo() {
   if (mainInput.value.trim() === ""){
     alert("Please enter a todo item.");
     return;
   }
-  todos.push({
-    id: idCounter++,
+  todosObject.todos.push({
+    id: todosObject.idCounter++,
     title: mainInput.value
   });
+  localStorage.setItem("todosObject", JSON.stringify(todosObject));
   mainInput.value = "";
   render();
 }
 
 function deleteTodo(todo) {
-  todos = todos.filter((elem) => {
+  todosObject.todos = todosObject.todos.filter((elem) => {
     return elem.id !== todo.id;
   });
+  localStorage.setItem("todosObject", JSON.stringify(todosObject));
   render();
 }
 
 function editTodo(todo, newVal){
-  todos.forEach((elem) => {
+  todosObject.todos.forEach((elem) => {
     if(elem.id === todo.id){
       elem.title = newVal;
     }
   });
+  localStorage.setItem("todosObject", JSON.stringify(todosObject));
   render();
 }
 
@@ -52,7 +57,7 @@ function editHandler(todo) {
   textarea.addEventListener('input', () => {
     autoResizeTextarea(textarea);
   });
-
+  editBtn.blur();
   editBtn.textContent = "Done";
   editBtn.classList.remove("edit-btn");
   editBtn.classList.add("done-btn");
@@ -86,11 +91,34 @@ function createTodoComponent(todo){
 
 function render() {
   mainDiv.innerHTML = "";
-  for (let i = 0; i < todos.length; i++){
-    const todo = todos[i];
-    div = createTodoComponent(todo);
+  for (let i = 0; i < todosObject.todos.length; i++){
+    const todo = todosObject.todos[i];
+    const div = createTodoComponent(todo);
     mainDiv.appendChild(div);
   }
 }
 
 mainButton.addEventListener('click', addTodo);
+
+document.addEventListener('DOMContentLoaded', () => {
+  try{
+    const todosObjectStored = JSON.parse(localStorage.getItem("todosObject"));
+    if (!todosObjectStored || Object.keys(todosObjectStored).length !== 2 || !Array.isArray(todosObjectStored.todos) || typeof (todosObjectStored.idCounter) !== 'number'){
+      alert('Todo object has been compromised from your local storage; resetting the app!');
+      localStorage.setItem("todosObject", JSON.stringify(todosObject));
+    } else {
+      todosObjectStored.todos.forEach((elem) => {
+        if ((typeof(elem.id) !== 'number') || (typeof(elem.title) !== 'string')){
+          throw Error('Todo object compromised');
+        }
+      });
+      todosObject.todos = todosObjectStored.todos;
+      todosObject.idCounter = todosObjectStored.idCounter;
+    }
+  } catch (err){
+    alert('Todo object has been compromised from your local storage; resetting the app!');
+    localStorage.setItem("todosObject", JSON.stringify(todosObject));
+  } finally{
+    render();
+  }
+});
