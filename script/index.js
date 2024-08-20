@@ -102,7 +102,13 @@ mainButton.addEventListener('click', addTodo);
 
 document.addEventListener('DOMContentLoaded', () => {
   try{
-    const todosObjectStored = JSON.parse(localStorage.getItem("todosObject"));
+    const localObject = localStorage.getItem("todosObject");
+    if(localObject === null){
+      localStorage.setItem("todosObject", JSON.stringify(todosObject));
+      render();
+      return;
+    }
+    const todosObjectStored = JSON.parse(localObject);
     if (!todosObjectStored || Object.keys(todosObjectStored).length !== 2 || !Array.isArray(todosObjectStored.todos) || typeof (todosObjectStored.idCounter) !== 'number'){
       alert('Todo object has been compromised from your local storage; resetting the app!');
       localStorage.setItem("todosObject", JSON.stringify(todosObject));
